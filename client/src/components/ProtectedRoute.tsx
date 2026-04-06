@@ -10,7 +10,7 @@ interface ProtectedRouteProps {
   authRequired: boolean;
 }
 
-const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ authRequired: _authRequired }) => {
+const ProtectedRoute: React.FC<ProtectedRouteProps> = () => {
   // TODO: Implement authentication checks
   // Currently bypassing all auth - allowing access to all routes
 
