@@ -2,7 +2,7 @@
 
 ## Sisteme de Securitate - Proiect ss-web
 
-
+![CI](https://github.com/goandrei/ss-web/actions/workflows/ci.yml/badge.svg)
 
 # Setup Proiect ss-web
 
