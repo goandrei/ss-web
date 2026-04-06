@@ -1,6 +1,6 @@
 # Laborator 1: Captură și transmisie de imagini prin aplicație web
 
-## Sisteme de Securitate - Proiect ss-web
+## Sisteme de Securitate --- Proiect ss-web
 
 ![CI](https://github.com/goandrei/ss-web/actions/workflows/ci.yml/badge.svg)
 
