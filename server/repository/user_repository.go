@@ -2,11 +2,15 @@ package repository
 
 import (
 	"context"
+	"errors"
+	"net/mail"
 
 	"go.mongodb.org/mongo-driver/mongo"
 
 	"mqtt-streaming-server/domain"
 )
+
+var ErrInvalidEmail = errors.New("invalid email format")
 
 type UserRepository struct {
 	db *mongo.Database
@@ -27,6 +31,9 @@ func (repo *UserRepository) Save(ctx context.Context, email, password string) er
 }
 
 func (repo *UserRepository) FindByEmail(ctx context.Context, email string) (*domain.User, error) {
+	if _, err := mail.ParseAddress(email); err != nil {
+		return nil, ErrInvalidEmail
+	}
 	collection := repo.db.Collection("users")
 	var user domain.User
 	err := collection.FindOne(ctx, map[string]string{"email": email}).Decode(&user)
