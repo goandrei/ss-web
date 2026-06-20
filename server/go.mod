@@ -9,7 +9,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/s3 v1.97.3
 	github.com/eclipse/paho.mqtt.golang v1.5.1
 	github.com/otiai10/gosseract/v2 v2.4.1
-	go.mongodb.org/mongo-driver v1.17.3
+	go.mongodb.org/mongo-driver v1.17.7
 	go.uber.org/mock v0.5.2
 	golang.org/x/crypto v0.45.0
 )
